@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import { program } from "commander";
 import { getConfig } from "./config.js";
 import { compileWorkspace } from "./compile.js";

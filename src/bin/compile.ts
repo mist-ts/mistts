@@ -96,7 +96,7 @@ export async function compile(
 
         out += "}";
 
-        const outPath = path.join(outDir, filePath + ".ts");
+        const outPath = filePath + ".ts";
         writeFile(outPath, out);
 
         console.log(`Compiled ${filePath} to ${outPath}. `);

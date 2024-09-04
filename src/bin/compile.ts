@@ -96,17 +96,7 @@ export async function compile(
 
         out += "}";
 
-        const outPath = path.join(
-            outDir,
-            filePath
-                .split("/")
-                .slice(0, -1)
-                .filter((slug) => slug !== "")
-                .join("/") +
-                "/" +
-                path.basename(filePath).split(".").slice(0, -1).join("") +
-                ".mist.ts"
-        );
+        const outPath = path.join(outDir, filePath + ".ts");
         writeFile(outPath, out);
 
         console.log(`Compiled ${filePath} to ${outPath}. `);

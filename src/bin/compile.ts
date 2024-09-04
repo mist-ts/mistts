@@ -23,7 +23,7 @@ export async function compileWorkspace(config: Config): Promise<void> {
 export async function compile(
     files: string[],
     rootDir: string,
-    outDir: string
+    _outDir: string
 ): Promise<void> {
     for (const filePath of files) {
         const code = (await readFile(filePath)).toString();

@@ -65,7 +65,7 @@ export async function compile(
         }
 
         out += "export const $meta = {\n";
-        out += `\tsourceFile: "${filePath.slice(rootDir.length - 1)}" as const,\n`;
+        out += `\tsourceFile: "${filePath.slice(rootDir.length + 1)}" as const,\n`;
         out += `\tslots: [${slots.map((slot) => `"${slot.slotNameSafe}"`).join(", ")}] as const,\n`;
         out += "}\n\n";
 
